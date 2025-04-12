@@ -24,6 +24,7 @@ export class PlateView {
 
     const textColor = config["textColor"] || "#000";
     const fontSize = config["fontSize"] || "11px";
+    const isCircular = (config["layout"] || "").toLowerCase() === "circular";
 
     const uniqueConditions = Array.from(new Set(Object.values(data)));
     const conditionColors = new Map<string, string>();
@@ -40,6 +41,7 @@ export class PlateView {
 
     const table = document.createElement("table");
     table.className = "tissue-plate";
+    if (isCircular) table.classList.add("circular");
 
     for (const row of layout.rows) {
       const tr = document.createElement("tr");
