@@ -3,7 +3,6 @@ Display PlateLayout for common Tissue Culture Plates in ObsidianMD
 # Install
 
 - Clone Rep.
-- Run `npx esbuild index.ts --bundle --outfile=main.js --platform=node --external:obsidian\n`
 - Copy main.js, style.css, and mainfest.json into plugin directorry: (e.g. ".obsidian/plugins/obsidian-tissue-culture"
 
 # Use
